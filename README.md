@@ -87,52 +87,49 @@
 ## How to Install & Run
 
 <ol>
-    <li>
-        <p>Clone this repository to your local machine using the following command:</p> 
-        <pre><code>git clone https://github.com/sagaKnight/Aura-Webpages.git</code></pre>
-    </li>
-    <li>
-        <strong>Set Up the MySQL Database</strong>
-        <ol>
-            <li>Start XAMPP: Open XAMPP Control Panel and start the Apache and MySQL services.</li>
-            <li>
-                <strong>Import the Database:</strong>
-                <p>Open phpMyAdmin by going to <code>http://localhost/phpmyadmin</code>.</p>
-                <p>Create a new database (e.g., <code>auraproject.sql</code>).</p>
-                <p>Select the database and click on the "Import" tab.</p>
-                <p>Choose the exported <code>.sql</code> file from the <code>database</code> folder in your project.</p>
-                <p>Click "Go" to import the database.</p>
-            </li>
-        </ol>
-    </li>
-    <li>
-        <strong>Install Project Dependencies</strong>
-        <p>Navigate to the Vue.js app directory (if it's within your main project folder) and install the necessary dependencies:</p>
-        <pre><code>cd Aura-Website</code></pre>
-        <pre><code>npm install</code></pre>
-    </li>
-    <li>
-        <strong>Start the Node Server</strong>
-        <p>Open a new terminal, navigate to the <code>Aura-Website/src</code> directory, and start the Node server by running:</p>
-        <pre><code>cd Aura-Website/src</code></pre>
-        <pre><code>node server.js</code></pre>
-        <p>If successful, "connected to database" will be outputted to the terminal.</p>
-    </li>
-    <li>
-        <strong>Run the Development Server</strong>
-        <p>Go back to your original terminal where you installed the project dependencies and start the development server by running:</p>
-        <pre><code>npm run dev</code></pre>
-        <p>You should see output similar to this:</p>
-        <pre><code> VITE vX.X.X  ready in X seconds
+  <li>
+    <p>Clone this repository to your local machine:</p>
+    <pre><code>git clone https://github.com/sagaKnight/Aura-Webpages.git
+cd Aura-Webpages</code></pre>
+  </li>
 
- ➜  Local:   http://localhost:5173/
- ➜  Network: use --host to expose</code></pre>
-    </li>
-    <li>
-        <strong>Open the App in Your Browser</strong>
-        <p>Open your web browser and go to <code>http://localhost:5173/</code> to view the website.</p>
-    </li>
+  <li>
+    <strong>Create the Environment File</strong>
+    <p>In the project root, create a file named <code>.env</code> and add:</p>
+    <pre><code>DB_HOST=localhost
+DB_USER=root
+DB_PASS=your_mysql_password
+DB_NAME=AuraProject
+DB_PORT=3306
+PORT=3000</code></pre>
+    <p>This file is not tracked in Git and must be created manually.</p>
+  </li>
+
+  <li>
+    <strong>Install Project Dependencies</strong>
+    <p>Run the following command:</p>
+    <pre><code>npm install</code></pre>
+  </li>
+
+  <li>
+    <strong>Start the Project</strong>
+    <p>This command will automatically:</p>
+    <ul>
+      <li>Start the Node backend</li>
+      <li>Import the SQL database if needed</li>
+      <li>Launch the Vite development server</li>
+    </ul>
+    <pre><code>npm run start</code></pre>
+    <p>Example output:</p>
+    <pre><code>Connected to database
+Database imported successfully (or already exists)
+VITE ready at http://localhost:5173/</code></pre>
+  </li>
+
+  <li>
+    <strong>Open the App</strong>
+    <p>Visit the site in your browser:</p>
+    <pre><code>http://localhost:5173/</code></pre>
+  </li>
 </ol>
-
-
 
