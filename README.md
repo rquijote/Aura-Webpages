@@ -108,6 +108,7 @@ PORT=3000</code></pre>
   <li>
     <strong>Install Project Dependencies</strong>
     <p>Run the following command:</p>
+    <pre>cd Aura-Website</pre>
     <pre><code>npm install</code></pre>
   </li>
 
